@@ -74,13 +74,13 @@ class BookDeepCopy extends Book implements Cloneable {
 public class Main {
     public static void main(String[] args) {
 
-        List<String> baseChapters = new ArrayList<>();
-        baseChapters.add("Ch 1: Intro");
-        baseChapters.add("Ch 2: Patterns");
-        baseChapters.add("Ch 3: Prototype");
+        List<String> initialChapters = new ArrayList<>();
+        initialChapters.add("Ch 1: Intro");
+        initialChapters.add("Ch 2: Patterns");
+        initialChapters.add("Ch 3: Prototype");
 
         System.out.println("Part 2: Shallow Copy");
-        BookShallowCopy originalShallow = new BookShallowCopy("Design Patterns", "EG, RH, RJ, JV", new ArrayList<>(baseChapters));
+        BookShallowCopy originalShallow = new BookShallowCopy("Design Patterns", "EG, RH, RJ, JV", new ArrayList<>(initialChapters));
         BookShallowCopy cloneShallow = originalShallow.clone();
 
         originalShallow.setChapter(1, "Ch 2: Structural Patterns");
@@ -90,7 +90,7 @@ public class Main {
         System.out.println("Clone    (shallow): " + cloneShallow);
 
         System.out.println("\nPart 3: Deep Copy");
-        BookDeepCopy originalDeep = new BookDeepCopy("Design Patterns", "EG, RH, RJ, JV", new ArrayList<>(baseChapters));
+        BookDeepCopy originalDeep = new BookDeepCopy("Design Patterns", "EG, RH, RJ, JV", new ArrayList<>(initialChapters));
         BookDeepCopy cloneDeep = originalDeep.clone();
 
         originalDeep.setChapter(0, "Ch 1: Overview");
