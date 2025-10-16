@@ -25,9 +25,15 @@ class Book {
         }
     }
 
-    public List<String> getChapters() { return chapters; }
-    public void setChapter(int idx, String value) { this.chapters.set(idx, value); }
-    public void addChapter(String value) { this.chapters.add(value); }
+    public List<String> getChapters() {
+        return chapters;
+    }
+    public void setChapter(int idx, String value) {
+        this.chapters.set(idx, value);
+    }
+    public void addChapter(String value) {
+        this.chapters.add(value);
+    }
 
     @Override
     public String toString() {
