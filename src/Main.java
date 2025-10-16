@@ -50,7 +50,6 @@ class BookShallowCopy extends Book implements Cloneable {
     }
 }
 
-/** Part 1 — Deep clone: copies the chapters list content. */
 class BookDeepCopy extends Book implements Cloneable {
     public BookDeepCopy(String title, String author, List<String> chapters) {
         super(title, author, chapters);
